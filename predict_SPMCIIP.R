@@ -1,6 +1,6 @@
 #!/usr/bin/env Rscript
 run <- function(infile, outfile){
-  load('data.Rdata')
+  load('data.RData')
   
   tmp <- read.csv('features.csv')
   tmp$X <- NULL
@@ -18,7 +18,6 @@ run <- function(infile, outfile){
 }
 
 pred_models <- function(model_list, X){
-  print(X)
   calibrate_model_list <- model_list$calibrate_model_list
   model_list <- model_list$model_list
   df <- data.frame(row.names = rownames(X))
